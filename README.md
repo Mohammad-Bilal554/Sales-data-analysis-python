@@ -26,7 +26,7 @@ SELECT Product_Category AS product,
        SUM(Quantity_Sold * Unit_Price) AS revenue
 FROM sales
 GROUP BY Product_Category
-ORDER BY revenue DESC;
+ORDER BY revenue DESC; ```
 
 - **Query 2:** Overall sales summary
 ```sql
