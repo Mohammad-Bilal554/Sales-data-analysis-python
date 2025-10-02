@@ -14,11 +14,11 @@
 
 ##  Work Performed
 
-### 1️⃣ Load CSV and Create SQLite Database
+### 1. Load CSV and Create SQLite Database
 - Loaded CSV into a pandas DataFrame.
 - Created `sales_data.db` and stored the data into a table called `sales`.
 
-### 2️⃣ SQL Queries
+### 2️. SQL Queries
 - **Query 1:** Total quantity and revenue by product category.
 ```sql
 SELECT Product_Category AS product,
@@ -27,4 +27,11 @@ SELECT Product_Category AS product,
 FROM sales
 GROUP BY Product_Category
 ORDER BY revenue DESC;
+
+- **Query 2:** Overall sales summary
+```sql
+
+SELECT SUM(Quantity_Sold) AS total_quantity_sold,
+       SUM(Quantity_Sold * Unit_Price) AS total_revenue
+FROM sales;
 
